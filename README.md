@@ -1,4 +1,4 @@
-# Coffee_Club
+# Coffee Lovers' Club
 
 Homepage:
 <img width="800" alt="homepage" src="https://user-images.githubusercontent.com/64384242/166857586-75badf2f-b66b-462d-9dc2-6a244824bea0.png">
