@@ -12,6 +12,13 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
+app.get('/:id', (req, res) => {
+    const id = req.params.id;
+    let index;
+    id === "hot" ? index = 0 : index = 1;
+    res.render('coffeePage', {preference: [coffeeData[index], id]});
+})
+
 app.listen(process.env.PORT || 8000, () => {
     console.log('Server listening on PORT 8000.');
 })

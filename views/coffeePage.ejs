@@ -1,0 +1,117 @@
+<%- include('../partials/header.ejs') %>
+<div class="flex flex-col lg:flex-row">
+  <div class="w-full lg:w-1/2">
+    <% preference[0].coffee.forEach((type) => { %>
+    <div class="w-full lg:flex opacity-80 border-y-2">
+      <div
+        class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal"
+      >
+        <div class="mb-8">
+          <p class="text-sm text-gray-600 flex items-center"></p>
+          <div class="text-gray-900 font-bold text-xl mb-2">
+            <%=type.title%>
+          </div>
+          <p class="text-gray-700 text-base"><%=type.description%></p>
+        </div>
+        <div class="flex items-center">
+          <img
+            class="w-12 h-12 rounded-full mr-5"
+            src="https://img.icons8.com/cotton/64/000000/coffee-maker.png"
+            alt="coffee_icon"
+          />
+          <div class="text-sm hover:scale-125 transition duration-200">
+            <p class="text-gray-900 leading-none">--> Show Details</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+  <div class="lg:w-1/2 text-center m-10 opacity-80">
+    <h1 class="text-3xl text-white mb-6">What we're all about:</h1>
+    <p class="text-lg text-justify text-white">
+      Coffee Lovers' Club was founded in 2022 by a young coffee lover just like you.
+      Watching the morning sunrise over his apartment balcony, he took his first sip
+      of Takuma-brand coffee from Japan and sighed as the morning beverage warmed his
+      body like a natural radiator. Perking up, he had an idea: Why not share the joy 
+      of coffee with others around the world? And thus, the club was born in a small room
+      near Tsurumi Station.
+    </p>
+    <p class="text-lg text-justify text-white mt-6">
+        Our mission is to connect people from all around the world who love the 
+        golden syrup known as coffee. We have a dedicated team of experts who are 
+        more then knowledgeable about the bean and how to extract its flavors. 
+    </p>
+    <p class="text-lg text-justify text-white mt-6">
+        Even if you've only drunk it <%=preference[1]%>, check out the other page!
+    </p>
+    <p class="text-lg text-justify text-white mt-6">
+        We hope you'll join us as well!
+    </p>
+    <div class="w-full my-6 opacity-95">
+        <h2 class="text-3xl text-white font-bold my-6">Sign up and Register for our Newsletter!</h2>
+      <form class="bg-white shadow-lg rounded px-8 pt-6 pb-8 mb-4" action="/register" method="post">
+        <div class="mb-4">
+          <label
+            class="block text-sm font-bold mb-2"
+            for="username"
+          >
+            Name
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+            id="username"
+            type="text"
+            placeholder="Username"
+          />
+        </div>
+        <div class="mb-6">
+            <label
+              class="block text-sm font-bold mb-2"
+              for="email"
+            >
+              Email
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+              id="email"
+              type="email"
+              placeholder="Email"
+            />
+          </div>
+        <div class="mb-6">
+          <label
+            class="block text-sm font-bold mb-2"
+            for="password"
+          >
+            Password
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+            id="password"
+            type="password"
+            placeholder="******************"
+          />
+          <p class="text-red-500 text-xs italic hidden">Please choose a password.</p>
+        </div>
+        <div class="flex items-center justify-between">
+          <button
+            class="bg-yellow-800 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="submit"
+          >
+            Sign Up
+          </button>
+          <a
+            class="inline-block align-baseline font-bold text-sm text-yellow-800 hover:text-yellow-600 hover:cursor-pointer"
+          >
+            Forgot Password?
+          </a>
+        </div>
+      </form>
+      <p class="text-center text-white text-xs">
+        &copy;2022 Coffee Lovers' Club. All rights reserved.
+      </p>
+    </div>
+  </div>
+</div>
+<%- include('../partials/footer.ejs') %>
