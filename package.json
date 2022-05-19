@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon",
+    "startdev" : "nodemon",
+    "start": "node app.js",
     "build-css": "npx tailwindcss -i ./public/stylesheets/input.css -o ./public/stylesheets/output.css",
     "watch-css": "npx tailwindcss -i ./public/stylesheets/input.css -o ./public/stylesheets/output.css --watch"
   },
